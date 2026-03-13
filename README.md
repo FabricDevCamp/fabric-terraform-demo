@@ -1,2 +1,2 @@
-# fabric-terraform-demo
-Sample Terraform configurations for Dev Ops and CI/CD in Fabric
+# Fabric Terraform Demo
+The repo holds a few sample Terraform configurations which demonstrate resource deployment for Dev Ops and CI/CD in Fabric.
