@@ -3,10 +3,10 @@ output "azure_capacity_id" {
   value       = azurerm_fabric_capacity.main.id
 }
 
-# output "fabric_capacity_id" {
-#   description = "Capacity id in Fabric"
-#   value       = data.fabric_capacity.main.id
-# }
+output "fabric_capacity_id" {
+  description = "Capacity id in Fabric"
+  value       = data.fabric_capacity.main.id
+}
 
 output "capacity_admins" {
   description = "Admins for capacity"
