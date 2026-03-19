@@ -13,12 +13,21 @@ output "lakehouse_id" {
   value = fabric_lakehouse.sales.id
 }
 
-output "lakehouse_sql_connect_string" {
+output "lakehouse_name" {
+  description = "Id of lakehouse"
+  value = fabric_lakehouse.sales.display_name
+}
+output "lakehouse_sql_endpoint_server" {
   description = "SQL endpoint connect string for lakehouse"
   value = fabric_lakehouse.sales.properties.sql_endpoint_properties.connection_string
 }
 
-output "lakehouse_sql_endpoint_id" {
+output "lakehouse_sql_endpoint_database" {
   description = "SQL endpoint id for lakehouse"
-  value = fabric_lakehouse.sales.properties.sql_endpoint_properties.id
+  value = fabric_lakehouse.sales.display_name
+}
+
+output "sql_endpoint_connection_id" {
+  description = "SQL endpoint id for lakehouse"
+  value = fabric_connection.lakehouse_sql_endpoint.id
 }
