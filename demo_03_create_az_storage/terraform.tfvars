@@ -6,7 +6,7 @@ client_secret = "{CLIENT_SECRET_HERE}"
 # Azure subscription Id
 subscription_id       = "12345678-1234-1234-1234-1234567890ab"
 
-resource_group_name   = "terraform-demo2"
+resource_group_name   = "terraform-demo3"
 storage_account_name  = "myveryuniquecapacityname"
 location              = "East US"
 
