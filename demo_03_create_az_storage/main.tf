@@ -18,7 +18,7 @@ resource "azurerm_storage_container" "sales_data" {
 }
 
 data "azurerm_storage_account_blob_container_sas" "sales_data_sas" {
-  connection_string = azurerm_storage_account.this.primary_connection_string
+  connection_string = azurerm_storage_account.main.primary_connection_string
   container_name    = azurerm_storage_container.sales_data.name
   https_only        = true
 
@@ -36,7 +36,7 @@ data "azurerm_storage_account_blob_container_sas" "sales_data_sas" {
 }
 
 locals {
-  adls_server = azurerm_storage_account.this.primary_dfs_endpoint
+  adls_server = azurerm_storage_account.main.primary_dfs_endpoint
   adls_container = data.azurerm_storage_account_blob_container_sas.sales_data_sas.container_name
   adls_target_path = "${local.adls_server}${local.adls_container}"
 }
